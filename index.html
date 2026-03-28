@@ -11,8 +11,8 @@
       text-align: center;
       color: white;
       /* Full-page Gateway Arch background */
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-                  url("https://upload.wikimedia.org/wikipedia/commons/d/d5/Gateway_Arch_St_Louis.jpg") no-repeat center center;
+      background: linear-gradient(to bottom, #007BFF, rgb(0, 0, 0));
+                  
       background-size: cover;
     }
 
@@ -175,16 +175,16 @@
   <div class="section">
     <h2>Pick Your Style</h2>
     <div class="gallery">
- <img src="https://via.placeholder.com/250?text=Style+1" alt="Style 1" data-service="Retwist No Style">
-  <img src="https://via.placeholder.com/250?text=Style+2" alt="Style 2" data-service="Retwist w/ Style">
-  <img src="https://via.placeholder.com/250?text=Style+3" alt="Style 3" data-service="Two Strands">
-  <img src="https://via.placeholder.com/250?text=Style+4" alt="Style 4" data-service="Quick Weave">
-  <img src="https://via.placeholder.com/250?text=Style+5" alt="Style 5" data-service="Ponytail">
-  <img src="https://via.placeholder.com/250?text=Style+6" alt="Style 6" data-service="Cuts">
-  <img src="https://via.placeholder.com/250?text=Style+7" alt="Style 7" data-service="Cut w/ Beard">
-  <img src="https://via.placeholder.com/250?text=Style+8" alt="Style 8" data-service="Starter Locs">
-  <img src="https://via.placeholder.com/250?text=Style+9" alt="Style 9" data-service="Natural Stitch Braids">
-  <img src="https://via.placeholder.com/250?text=Style+10" alt="Style 10" data-service="Natural Braids">
+ <img src="Retwist No Style.png.png" alt="Style 1" data-service="Retwist No Style">
+  <img src="Retwist w Style.png.png" alt="Style 2" data-service="Retwist w/ Style">
+  <img src="Two Strands.png.png" alt="Style 3" data-service="Two Strands">
+  <img src="Quick Weave.png.heic" alt="Style 4" data-service="Quick Weave">
+  <img src="ponytail.png.png" alt="Style 5" data-service="Ponytail">
+  <img src="Cuts.png.jpeg" alt="Style 6" data-service="Cuts">
+  <img src="Cut with Beard.png.jpeg" alt="Style 7" data-service="Cut w/ Beard">
+  <img src="Starter Locs.png.jpg" alt="Style 8" data-service="Starter Locs">
+  <img src="Stitch braids.png.jpeg" alt="Style 9" data-service="Natural Stitch Braids">
+  <img src="Natural Braids.png.png" alt="Style 10" data-service="Natural Braids">
 </div>
   </div>
 
@@ -193,7 +193,7 @@
     <h2>Visit Us </h2>
     <div class="info">
       📍 2823 Patterson Rd, Florissant, MO 63031<br>
-      ⏰ Tue-Sat: 9:30Am - 6:00Pm<br>
+      ⏰ Tue-Sat: 9:30Am - 6:00Pm (OPEN 9AM SATURDAY)<br>
       📞 Call: (314) 942-9564
     </div>
   </div>
@@ -202,7 +202,7 @@
   <div class="section">
     <h2>Our Services</h2>
     <div class="info">
-      ✂ Retwist No Style - $85<br>
+      ✂ Retwist No Style - $70<br>
       ✂ Retwist w/ Style - $85<br>
       ✂ Two Strands - $70<br>
       ✂ Quick Weave - $100 (Styling Included)<br>
@@ -223,7 +223,7 @@
       <input type="text" id="name" placeholder="Your Name">
       <select id="service-select">
         <option value="">Select Service</option>
-        <option value="Retwist No Style">Retwist No Style - $85</option>
+        <option value="Retwist No Style">Retwist No Style - $70</option>
         <option value="Retwist w/ Style">Retwist w/ Style - $85</option>
         <option value="Two Strands">Two Strands - $70</option>
         <option value="Quick Weave">Quick Weave - $100 (Styling Included)</option>
@@ -268,3 +268,53 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment - Smooth Cutz Barbershop</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #007BFF, black);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    .payment-section {
+      background-color: rgba(0,0,0,0.8);
+      padding: 30px;
+      border-radius: 15px;
+      display: inline-block;
+    }
+    .payments {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .payment-item {
+      background: rgba(0,0,0,0.7);
+      border: 2px solid gold;
+      padding: 15px 25px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .payment-item:hover {
+      background-color: rgba(255,215,0,0.1);
+      transform: scale(1.05);
+    }
+    .payment-item img {
+      width: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+
+ 
