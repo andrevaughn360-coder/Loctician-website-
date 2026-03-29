@@ -2,304 +2,434 @@
 <html>
 
 <head>
-  <title>Smooth Cutz Barbershop</title>
-  <style>
-    /* ===== Body & Background ===== */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
-      background: linear-gradient(to bottom, #007BFF, rgb(0, 0, 0));
-      background-size: cover;
-      scroll-behavior: smooth;
-    }
+    <title>Smooth Cutz Barbershop</title>
+    <style>
+        /* ===== Body & Background ===== */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background: linear-gradient(to bottom, #007BFF, rgb(0, 0, 0));
+            background-size: cover;
+            scroll-behavior: smooth;
+        }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    /* ===== Navbar ===== */
-    nav {
-      display: flex;
-  justify-content: center; /* center everything horizontally */
-  align-items: center;
-  padding: 15px 40px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 100;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    }
+        /* ===== Navbar ===== */
+        nav {
+            display: flex;
+            justify-content: center;
+            /* center everything horizontally */
+            align-items: center;
+            padding: 15px 40px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
 
-    nav .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 25px;
-    }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
 
-    nav ul li a {
-      font-weight: bold;
-      color: white;
-      transition: color 0.3s;
-    }
+        nav ul li a {
+            font-weight: bold;
+            color: white;
+            transition: color 0.3s;
+        }
 
-    nav ul li a:hover {
-      color: gold;
-    }
+        nav ul li a:hover {
+            color: gold;
+        }
 
-    /* ===== Header ===== */
-    h1 {
-      font-size: 48px;
-      color: #fff;
-      text-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px red, 0 0 20px blue, 0 0 25px red, 0 0 30px blue;
-      margin-top: 100px;
-      text-align: center;
-    }
+        /* ===== Header ===== */
+        h1 {
+            font-size: 48px;
+            color: #fff;
+            text-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px red, 0 0 20px blue, 0 0 25px red, 0 0 30px blue;
+            margin-top: 100px;
+            text-align: center;
+        }
 
-    h2 {
-      margin-bottom: 20px;
-    }
+        h2 {
+            margin-bottom: 20px;
+        }
 
-    /* ===== Section Container ===== */
-    .section {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 40px 20px;
-      margin: 30px auto;
-      border-radius: 15px;
-      width: 80%;
-      max-width: 900px;
-      box-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px red, 0 0 20px blue, 0 0 25px red, 0 0 30px blue;
-    }
+        /* ===== Section Container ===== */
+        .section {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px 20px;
+            margin: 30px auto;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 900px;
+            box-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px red, 0 0 20px blue, 0 0 25px red, 0 0 30px blue;
+        }
 
-    /* ===== Gallery ===== */
-    .gallery{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-    }
+        /* ===== Gallery ===== */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
 
-    .gallery img {
-      width: 250px;
-      height: 250px;
-      border-radius: 15px;
-      object-fit: cover;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-      transition: transform 0.3s ease;
-      cursor: pointer;
-      filter: grayscale(20%);
-    }
+        .gallery img {
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            filter: grayscale(20%);
+        }
 
-    .gallery img:hover {
-      transform: scale(1.05);
-      filter: grayscale(0%);
-    }
+        .gallery img:hover {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
 
-    /* ===== Info Text ===== */
-    .info {
-      font-size: 18px;
-      margin-top: 20px;
-      text-align: center;
-    }
+        /* ===== Info Text ===== */
+        .info {
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+        }
 
-    /* ===== Buttons ===== */
-    .btn {
-      padding: 14px 30px;
-      background-color: gold;
-      color: black;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: all 0.3s ease;
-    }
+        .section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #fff;
+            text-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px red, 0 0 20px blue, 0 0 25px red, 0 0 30px blue;
+        }
 
-    .btn:hover {
-      background-color: orange;
-      transform: scale(1.05);
-    }
+        /* ===== Buttons ===== */
+        .btn {
+            padding: 14px 30px;
+            background-color: gold;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
 
-    /* ===== Appointment Form Styling ===== */
-    .form-container {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 30px 40px;
-      border-radius: 15px;
-      width: 350px;
-      margin: 20px auto;
-      box-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px red, 0 0 20px blue, 0 0 25px red, 0 0 30px blue;
-    }
+        .btn:hover {
+            background-color: orange;
+            transform: scale(1.05);
+        }
 
-    .form-container input,
-    .form-container select {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: none;
-      text-align: center;
-      font-size: 16px;
-      background-color: #1f1f1f;
-      color: white;
-      outline: none;
-      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
-    }
+        /* ===== Appointment Form Styling ===== */
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px 40px;
+            border-radius: 15px;
+            width: 350px;
+            margin: 20px auto;
+            box-shadow: 0 0 5px red, 0 0 10px blue, 0 0 15px red, 0 0 20px blue, 0 0 25px red, 0 0 30px blue;
+        }
 
-    .form-container select {
-      text-align-last: center;
-    }
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            text-align: center;
+            font-size: 16px;
+            background-color: #1f1f1f;
+            color: white;
+            outline: none;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
 
-    .form-container input:focus,
-    .form-container select:focus {
-      border: 2px solid gold;
-      box-shadow: 0 0 8px gold;
-    }
+        .form-container select {
+            text-align-last: center;
+        }
 
-    .form-container button {
-      width: 100%;
-      padding: 14px;
-      margin-top: 20px;
-      background-color: gold;
-      color: black;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+        .form-container input:focus,
+        .form-container select:focus {
+            border: 2px solid gold;
+            box-shadow: 0 0 8px gold;
+        }
 
-    .form-container button:hover {
-      background-color: orange;
-      transform: scale(1.05);
-    }
+        .form-container button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 20px;
+            background-color: gold;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-    #message {
-      margin-top: 20px;
-      font-size: 16px;
-      color: lightgreen;
-    }
+        .form-container button:hover {
+            background-color: orange;
+            transform: scale(1.05);
+        }
 
-    /* ===== Payment Section ===== */
-    .payments {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+        #message {
+            margin-top: 20px;
+            font-size: 16px;
+            color: lightgreen;
+        }
 
-    .payment-item {
-      background: rgba(0, 0, 0, 0.7);
-      border: 2px solid gold;
-      padding: 15px 25px;
-      border-radius: 12px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+        /* ===== Payment Section ===== */
+        .payments {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-    .payment-item:hover {
-      background-color: rgba(255, 215, 0, 0.1);
-      transform: scale(1.05);
-    }
+        .payment-item {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid gold;
+            padding: 15px 25px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-    .payment-item img {
-      width: 24px;
-      vertical-align: middle;
-    }
-     
-    #gallery h2 {
-      text-align: center;
-    } 
-    /* ===== Footer ===== */
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #ccc;
-    }
-  </style>
+        .payment-item:hover {
+            background-color: rgba(255, 215, 0, 0.1);
+            transform: scale(1.05);
+        }
+
+        .payment-item img {
+            width: 24px;
+            vertical-align: middle;
+        }
+
+        #gallery h2 {
+            text-align: center;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #ccc;
+        }
+    </style>
 </head>
 
 <body> <!-- Navbar -->
-  <nav>
-    <div class="logo">💈 Smooth Cutz</div>
-    <ul>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#appointment">Book</a></li>
-      <li><a href="#payment">Payment</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav> <!-- Header -->
-  <h1>💈 Smooth Cutz Barbershop</h1> <!-- Gallery Section -->
-  <div class="section" id="gallery">
-    <h2>Pick Your Style</h2>
-    <div class="gallery"> <img src="Retwist No Style.png.png" alt="Style 1" data-service="Retwist No Style"> <img
-        src="Retwist w Style.png.png" alt="Style 2" data-service="Retwist w/ Style"> <img src="Two Strands.png.png"
-        alt="Style 3" data-service="Two Strands"> <img src="Quick Weave.png.heic" alt="Style 4"
-        data-service="Quick Weave"> <img src="ponytail.png.png" alt="Style 5" data-service="Ponytail"> <img
-        src="Cuts.png.jpeg" alt="Style 6" data-service="Cuts"> <img src="Cut with Beard.png.jpeg" alt="Style 7"
-        data-service="Cut w/ Beard"> <img src="Starter Locs.png.jpg" alt="Style 8" data-service="Starter Locs"> <img
-        src="Stitch braids.png.jpeg" alt="Style 9" data-service="Natural Stitch Braids"> <img
-        src="Natural Braids.png.png" alt="Style 10" data-service="Natural Braids"> </div>
-  </div> <!-- Services Section -->
-  <div class="section" id="services">
-    <h2>Our Services</h2>
-    <div class="info"> ✂ Retwist No Style - $70<br> ✂ Retwist w/ Style - $85<br> ✂ Two Strands - $70<br> ✂ Quick Weave -
-      $100 (Styling Included)<br> ✂ Ponytail - $85<br> ✂ Cuts - $25<br> ✂ Cut w/ Beard - $35<br> ✂ Starter Locs -
-      $110<br> ✂ Natural Stitch Braids - $65<br> ✂ Natural Braids - $75 </div> <button class="btn"
-      onclick="document.getElementById('appointment').scrollIntoView({behavior:'smooth'})">Book Now</button>
-  </div> <!-- Appointment Section -->
-  <div class="section" id="appointment">
-    <h2>Book Appointment</h2>
-    <div class="form-container"> <input type="text" id="name" placeholder="Your Name"> <select id="service-select">
-        <option value="">Select Service</option>
-        <option value="Retwist No Style">Retwist No Style - $70</option>
-        <option value="Retwist w/ Style">Retwist w/ Style - $85</option>
-        <option value="Two Strands">Two Strands - $70</option>
-        <option value="Quick Weave">Quick Weave - $100 (Styling Included)</option>
-        <option value="Ponytail">Ponytail - $85</option>
-        <option value="Cuts">Cuts - $25</option>
-        <option value="Cut w/ Beard">Cut w/ Beard - $35</option>
-        <option value="Starter Locs">Starter Locs - $110</option>
-        <option value="Natural Stitch Braids">Natural Stitch Braids - $65</option>
-        <option value="Natural Braids">Natural Braids - $75</option>
-      </select> <input type="date" id="date"> <input type="time" id="time"> <button onclick="bookAppointment()">Book
-        Appointment</button>
-      <p id="message"></p>
-    </div>
-  </div> <!-- Payment Section -->
-  <div class="section" id="payment">
-    <h2>Payment Options</h2>
-    <div class="payments">
-      <div class="payment-item">💵 Cash</div>
-<div class="payment-item">📱 Apple Pay</div>
-<div class="payment-item">💙 Venmo</div>
-<div class="payment-item">💲 Cash App</div>
-    </div>
-  </div> <!-- Contact Section -->
-  <div class="section" id="contact">
-    <h2>Contact Us</h2>
-    <div class="info"> 📍 2823 Patterson Rd, Florissant, MO 63031<br> ⏰ Tue-Sat: 9:30AM - 6:00PM (OPEN 9AM SATURDAY)<br>
-      📞 Call: (314) 942-9564 </div>
-  </div> <!-- Footer -->
-  <footer>© 2026 Smooth Cutz Barbershop</footer> <!-- Scripts -->
-  <script> function bookAppointment() { const name = document.getElementById('name').value; const service = document.getElementById('service-select').value; const date = document.getElementById('date').value; const time = document.getElementById('time').value; if (name && service && date && time) { document.getElementById('message').innerText = Appointment booked for ${ name } on ${ date } at ${ time } for ${ service }!; } else { document.getElementById('message').innerText = "Please fill out all fields."; } } // Click gallery image to select service and scroll document.querySelectorAll('.gallery img').forEach(img => { img.addEventListener('click', () => { const service = img.getAttribute('data-service'); document.getElementById('service-select').value = service; document.getElementById('appointment').scrollIntoView({behavior:'smooth'}); }); }); </script>
-</body>
+    <nav>
+        <div class="logo">💈 Smooth Cutz</div>
+        <ul>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#appointment">Book</a></li>
+            <li><a href="#payment">Payment</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav> <!-- Header -->
+    <h1>💈 Smooth Cutz Barbershop</h1> <!-- Gallery Section -->
+    <div class="section" id="gallery">
+        <h2>Pick Your Style</h2>
+        <div class="gallery">         <div class="gallery"> <img src="{{ url_for('static', filename='images/Retwist No Style.png.png') }}" alt="Style 1" data-service="Retwist No Style">  <img
+                src="{{ url_for('static', filename='images/Retwist w Style.png.png') }}" alt="Style 2" data-service="Retwist w/ Style"> <img
+                src="{{ url_for('static', filename='images/Two Strands.png.png') }}" alt="Style 3" data-service="Two Strands"> <img src="{{ url_for('static', filename='images/Quick Weave.png.heic') }}"
+                alt="Style 4" data-service="Quick Weave"> <img src="{{ url_for('static', filename='images/ponytail.png.png') }}" alt="Style 5"
+                data-service="Ponytail"> <img src="{{ url_for('static', filename='images/Cuts.png.jpeg') }}" alt="Style 6" data-service="Cuts"> <img
+                src="{{ url_for('static', filename='images/Cut with Beard.png.jpeg') }}" alt="Style 7" data-service="Cut w/ Beard"> <img src="{{ url_for('static', filename='images/Starter Locs.png.jpg') }}"
+                alt="Style 8" data-service="Starter Locs"> <img src="{{ url_for('static', filename='images/Stitch braids.png.jpeg') }}" alt="Style 9"
+                data-service="Natural Stitch Braids"> <img src="{{ url_for('static', filename='images/Natural Braids.png.png') }}" alt="Style 10"
+                data-service="Natural Braids"> 
+  </div>
+</div>
+    </div> <!-- Services Section -->
+    <div class="section" id="services">
+        <h2>Our Services</h2>
+        <div class="info"> ✂ Retwist No Style - $70<br> ✂ Retwist w/ Style - $85<br> ✂ Two Strands - $70<br> ✂ Quick
+            Weave - $100 (Styling Included)<br> ✂ Ponytail - $85<br> ✂ Cuts - $25<br> ✂ Cut w/ Beard - $35<br> ✂ Starter
+            Locs - $110<br> ✂ Natural Stitch Braids - $65<br> ✂ Natural Braids - $75 </div>   <div style="text-align: center; margin-top: 20px;">
+    <button class="btn"
+        onclick="document.getElementById('appointment').scrollIntoView({behavior:'smooth'})">
+        Book Now
+    </button>
+</div>
+    </div> <!-- Appointment Section -->
+    <div class="section" id="appointment">
+        <h2>Book Appointment</h2>
+        <div class="form-container">
 
-</html>
+    <input type="text" id="name" placeholder="Your Name">
+
+    <select id="service-select">
+        <option value="">Select Service</option>
+        <option value="Retwist No Style - $70">Retwist No Style - $70</option>
+        <option value="Retwist w/ Style - $85">Retwist w/ Style - $85</option>
+        <option value="Two Strands - $70">Two Strands - $70</option>
+        <option value="Quick Weave - $100 (Styling Included)">Quick Weave - $100 (Styling Included)</option>
+        <option value="Ponytail - $85">Ponytail - $85</option>
+        <option value="Cuts - $25">Cuts - $25</option>
+        <option value="Cut w/ Beard - $35">Cut w/ Beard - $35</option>
+        <option value="Starter Locs - $110">Starter Locs - $110</option>
+        <option value="Natural Stitch Braids - $65">Natural Stitch Braids - $65</option>
+        <option value="Natural Braids - $75">Natural Braids - $75</option>
+    </select>
+
+    <input type="date" id="date">
+    <input type="time" id="time">
+
+    <button onclick="bookAppointment()">Book Appointment</button>
+    <p id="message"></p>
+
+</div>
+    </div> <!-- Payment Section -->
+    <div class="section" id="payment">
+        <h2>Payment Options</h2>
+        <div class="payments">
+            <div class="payment-item">💵 Cash</div>
+            <div class="payment-item">📱 Apple Pay</div>
+            <div class="payment-item">💙 Venmo</div>
+            <div class="payment-item">💲 Cash App</div>
+        </div>
+    </div> <!-- Contact Section -->
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <div class="info"> 📍 2823 Patterson Rd, Florissant, MO 63031<br> ⏰ Tue-Sat: 9:30AM - 6:00PM (OPEN 9AM
+            SATURDAY)<br> 📞 Call: (314) 942-9564 </div>
+    </div> <!-- Footer -->
+    <footer>© 2026 Smooth Cutz Barbershop</footer> <!-- Scripts -->
+   <script>
+  // BOOK APPOINTMENT FUNCTION
+  function bookAppointment() {
+      const name = document.getElementById('name').value;
+      const service = document.getElementById('service-select').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+
+      if (name && service && date && time) {
+          document.getElementById('message').innerText = `Appointment booked for ${name} on ${date} at ${time} for ${service}!`;
+      } else {
+          document.getElementById('message').innerText = "Please fill out all fields.";
+      }
+    }
+
+
+
+  // WAIT UNTIL DOM LOADS
+  window.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('.gallery img');
+      const dropdown = document.getElementById('service-select');
+
+      images.forEach(img => {
+          img.addEventListener('click', () => {
+              const service = img.getAttribute('data-service');
+
+
+              // 1️⃣ Set dropdown value
+              const serviceInput = document.getElementById('service');
+              if (serviceInput) serviceInput.value = service;
+
+              // 2️⃣ Highlight clicked image
+              images.forEach(i => i.style.border = "none"); // remove border from all
+              img.style.border = "4px solid gold"; // highlight clicked
+
+              // 3️⃣ Scroll to booking section
+              const appointmentSection = document.getElementById('appointment');
+              if (appointmentSection) {
+                  appointmentSection.scrollIntoView({ behavior: 'smooth' });
+              }
+          });
+      });
+  });
+
+
+ function bookAppointment() {
+    const name = document.getElementById('name').value;
+    const service = document.getElementById('service').value;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+
+    if (!name || !service || !date || !time) {
+        document.getElementById('message').innerText = "Please fill out all fields.";
+        return;
+    }
+
+    document.getElementById('message').innerText =
+        `Appointment booked for ${name} on ${date} at ${time} for ${service}!`;
+}
+
+    
+
+      // Map service to price
+      const priceMap = {
+          "Retwist No Style": "$70",
+          "Retwist w/ Style": "$85",
+          "Two Strands": "$70",
+          "Quick Weave": "$100",
+          "Ponytail": "$85",
+          "Cuts": "$25",
+          "Cut w/ Beard": "$35",
+          "Starter Locs": "$110",
+          "Natural Stitch Braids": "$65",
+          "Natural Braids": "$75"
+      };
+      const price = priceMap[service] || "$0";
+
+
+
+      // Send booking data to Flask backend
+      fetch('http://127.0.0.1:5000', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: name, service, price, date, time })
+      })
+      .then(res => res.json())
+      .then(data => {
+          if (data.status === "success") {
+              document.getElementById('message').innerText = 
+                  `Appointment booked for ${name} on ${date} at ${time} for ${service}!`;
+          }
+      })
+      .catch(err => {
+          document.getElementById('message').innerText = "Error booking appointment.";
+          console.error(err);
+      });
+  
+
+
+  // ===== Gallery Image Click Handler =====
+
+  
  
+  
+  
+
+
+     
+</script>
