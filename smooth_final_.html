@@ -571,22 +571,22 @@
 
   if (type === "Venmo") {
     if (isMobile) {
-      window.location.href = `venmo://paycharge?txn=pay&recipients=SmoothCutz&note=${note}`;
+      window.location.href = `venmo://paycharge?txn=pay&recipients=Rochan-G&note=${note}`;
       setTimeout(() => {
-        window.location.href = "https://venmo.com/SmoothCutz";
+        window.location.href = "https://venmo.com/Rochan-G";
       }, 800);
     } else {
-      window.open("https://venmo.com/SmoothCutz", "_blank");
+      window.open("https://venmo.com/Rochan-G", "_blank");
     }
 
   } else if (type === "Cash App") {
     if (isMobile) {
-      window.location.href = "cashapp://pay?recipient=SmoothCutz";
+      window.location.href = "cashapp://pay?recipient=rochanG";
       setTimeout(() => {
-        window.location.href = "https://cash.app/$SmoothCutz";
+        window.location.href = "https://cash.app/$rochanG";
       }, 800);
     } else {
-      window.open("https://cash.app/$SmoothCutz", "_blank");
+      window.open("https://cash.app/$rochanG", "_blank");
     }
 
   } else if (type === "Apple Pay") {
