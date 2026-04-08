@@ -566,20 +566,36 @@
 
   // ── PAYMENT BUTTONS ─────────────────────────────────────────────────
   function handlePayment(type) {
-    const note = encodeURIComponent("Smooth Cutz Appointment");
-    if (type === "Venmo") {
-      window.location.href = "venmo://paycharge?txn=pay&recipients=SmoothCutz&note=" + note;
-      setTimeout(() => window.open("https://venmo.com/SmoothCutz", "_blank"), 1500);
-    } else if (type === "Cash App") {
-      window.location.href = "cashapp://cash.app/pay/$SmoothCutz";
-      setTimeout(() => window.open("https://cash.app/$SmoothCutz", "_blank"), 1500);
-    } else if (type === "Apple Pay") {
-      window.location.href = "shoebox://";
-      setTimeout(() => alert("To use Apple Pay, open this site in Safari on your iPhone or Mac and tap Apple Pay."), 1000);
-    } else if (type === "Cash") {
-      alert("You'll pay in person at your appointment. Please arrive on time with the correct amount.");
+  const note = encodeURIComponent("Smooth Cutz Appointment");
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  if (type === "Venmo") {
+    if (isMobile) {
+      window.location.href = `venmo://paycharge?txn=pay&recipients=SmoothCutz&note=${note}`;
+      setTimeout(() => {
+        window.location.href = "https://venmo.com/SmoothCutz";
+      }, 800);
+    } else {
+      window.open("https://venmo.com/SmoothCutz", "_blank");
     }
+
+  } else if (type === "Cash App") {
+    if (isMobile) {
+      window.location.href = "cashapp://pay?recipient=SmoothCutz";
+      setTimeout(() => {
+        window.location.href = "https://cash.app/$SmoothCutz";
+      }, 800);
+    } else {
+      window.open("https://cash.app/$SmoothCutz", "_blank");
+    }
+
+  } else if (type === "Apple Pay") {
+    alert("Apple Pay only works in Safari on Apple devices.");
+    
+  } else if (type === "Cash") {
+    alert("You'll pay in person at your appointment. Please arrive on time with the correct amount.");
   }
+}
 
   // ── TOAST ────────────────────────────────────────────────────────────
   function showToast(title, body) {
